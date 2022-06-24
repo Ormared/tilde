@@ -31,12 +31,12 @@
     /**
      * The delimiter between the hours, minutes and seconds on the clock.
      */
-    clockDelimiter: ' – ',
+    clockDelimiter: ':',
 
     /**
      * Show seconds on the clock. A monospaced font is recommended for this.
      */
-    clockShowSeconds: false,
+    clockShowSeconds: true,
 
     /**
      * Show AM/PM indication when CONFIG.clockTwentyFourHours is false.
@@ -672,21 +672,28 @@
   }
 </style>
 
-<div class="center">
-  <time class="clock" id="clock" />
-</div>
-<form
-  autocomplete="off"
-  class="center overlay search-form"
-  id="search-form"
-  spellcheck="false"
->
-  <div class="search-form-content">
-    <input class="search-input" id="search-input" title="search" type="text" />
-    <ul class="search-suggestions" id="search-suggestions" />
+<body>
+  <div class="center">
+    <time class="clock" id="clock" />
   </div>
-</form>
-<aside class="center help overlay" id="help" />
+  <form
+    autocomplete="off"
+    class="center overlay search-form"
+    id="search-form"
+    spellcheck="false"
+  >
+    <div class="search-form-content">
+      <input
+        class="search-input"
+        id="search-input"
+        title="search"
+        type="text"
+      />
+      <ul class="search-suggestions" id="search-suggestions" />
+    </div>
+  </form>
+  <aside class="center help overlay" id="help" />
+</body>
 
 <script>
   const $ = {
