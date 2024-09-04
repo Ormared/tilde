@@ -127,7 +127,8 @@
       0: ["0'8000", "0'8080"],
       a: ['a/cognito/v2/idp/user-pools', 'a/dynamodbv2#item-explorer'],
       c: ['c/calendar/u/1/r', 'c/calendar/u/2/r'],
-      d: ['d/drive/u/1/my-drive', 'd/drive/u/2/my-drive'],
+      mg:['mg/u/0/inbox', 'mg/u/1/inbox', 'mg/u/2/inbox', 'mg/u/3/inbox'],
+      d: ['d/drive/u/0/my-drive','d/drive/u/1/my-drive', 'd/drive/u/2/my-drive', 'd/drive/u/1/my-drive'],
       e: ['e/brand/national-geographic', 'e/brand/marvel', 'e/brand/star-wars'],
       g: ['g/trending', 'g/ossu', 'g/xvvvyz/tilde', 'gist.github.com'],
       h: ['h/popular', 'h/popular/lastweek', 'h/tags'],
@@ -362,6 +363,12 @@
         name: 'Google Colab',
         url: "https://colab.research.google.com/?authuser=3"
         // search: '/search?q={}',
+      },
+      {
+        hues: [0],
+        key: 'p',
+        name: 'Perplexity',
+        url: 'https://www.perplexity.ai',
       }
     ].map((command) => {
       const hsla = (hue, saturation = 'var(--command-color-saturation)') =>
