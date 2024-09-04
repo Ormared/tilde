@@ -127,8 +127,8 @@
       0: ["0'8000", "0'8080"],
       a: ['a/cognito/v2/idp/user-pools', 'a/dynamodbv2#item-explorer'],
       c: ['c/calendar/u/1/r', 'c/calendar/u/2/r'],
-      mg:['mg/u/0/inbox', 'mg/u/1/inbox', 'mg/u/2/inbox', 'mg/u/3/inbox'],
-      d: ['d/drive/u/0/my-drive','d/drive/u/1/my-drive', 'd/drive/u/2/my-drive', 'd/drive/u/1/my-drive'],
+      mg: ['mg/u/0/inbox', 'mg/u/1/inbox', 'mg/u/2/inbox', 'mg/u/3/inbox'],
+      d: ['d/drive/u/0/my-drive', 'd/drive/u/1/my-drive', 'd/drive/u/2/my-drive', 'd/drive/u/1/my-drive'],
       e: ['e/brand/national-geographic', 'e/brand/marvel', 'e/brand/star-wars'],
       g: ['g/trending', 'g/ossu', 'g/xvvvyz/tilde', 'gist.github.com'],
       h: ['h/popular', 'h/popular/lastweek', 'h/tags'],
@@ -339,7 +339,7 @@
         name: 'B-ok',
         search: '/s/{}?',
         url: 'https://b-ok.org/',
-      },{
+      }, {
         key: 'manga',
         name: 'MangaDex',
         search: '/search?q={}',
@@ -358,14 +358,13 @@
         url: "https://app.eraser.io/dashboard/all"
       },
       {
-        hues: [29,244],
+        hues: [29, 244],
         key: 'gc',
         name: 'Google Colab',
         url: "https://colab.research.google.com/?authuser=3"
         // search: '/search?q={}',
       },
       {
-        hues: [0],
         key: 'p',
         name: 'Perplexity',
         url: 'https://www.perplexity.ai',
@@ -565,7 +564,7 @@
     height: 100%;
   }
 
-  .center > * {
+  .center>* {
     margin: auto;
   }
 
@@ -702,19 +701,9 @@
   <div class="center">
     <time class="clock" id="clock" />
   </div>
-  <form
-    autocomplete="off"
-    class="center overlay search-form"
-    id="search-form"
-    spellcheck="false"
-  >
+  <form autocomplete="off" class="center overlay search-form" id="search-form" spellcheck="false">
     <div class="search-form-content">
-      <input
-        class="search-input"
-        id="search-input"
-        title="search"
-        type="text"
-      />
+      <input class="search-input" id="search-input" title="search" type="text" />
       <ul class="search-suggestions" id="search-suggestions" />
     </div>
   </form>
@@ -1039,9 +1028,9 @@
 
         const suggestionHtml = matched
           ? suggestion.replace(
-              match,
-              `<span class="search-suggestion-match">${matched[0]}</span>`
-            )
+            match,
+            `<span class="search-suggestion-match">${matched[0]}</span>`
+          )
           : suggestion;
 
         return `
